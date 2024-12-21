@@ -4,7 +4,7 @@ pipeline {
 		stage("Jenkins for front") {
 			steps {
 					echo "======= FRONT ======="
-					sh "env"
+					echo "Parameter param1 is: ${params.param1}"
 			   }
 		  }
 	 }
