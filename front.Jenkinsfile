@@ -8,5 +8,11 @@ pipeline {
 					sh "ls -la"
 			   }
 		  }
+	  stage('Clone Repository') {
+      steps {
+          git 'https://github.com/EdgarHarutyunyan2025/font_jenkins.git'
+					sh "ls -la "
+            }
+        }
 	 }
 }
