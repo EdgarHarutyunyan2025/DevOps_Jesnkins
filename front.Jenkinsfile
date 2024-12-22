@@ -1,5 +1,8 @@
 pipeline {
 	agent any
+	parameters {
+    string(name: 'BRANCH', defaultValue: 'main')
+    }
 	stages{
 		stage("Jenkins for front") {
 			steps {
@@ -10,7 +13,7 @@ pipeline {
 		  }
 	  stage('Clone Repository') {
       steps {
-          git 'https://github.com/EdgarHarutyunyan2025/font_jenkins.git'
+			    git branch: params.BRANCH, url: 'https://github.com/EdgarHarutyunyan2025/font_jenkins.git'
 					sh "ls -la "
             }
         }
