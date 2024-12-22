@@ -5,6 +5,7 @@ pipeline {
 			steps {
 					echo "======= FRONT ======="
 					echo "Parameter param1 is: ${params.param1}"
+					sh "ls -la"
 			   }
 		  }
 	 }
